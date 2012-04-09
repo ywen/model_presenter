@@ -1,6 +1,6 @@
 # ModelPresenter
 
-TODO: Write a gem description
+ModelPresenter provides basic framework in creating a presenter.
 
 ## Installation
 
