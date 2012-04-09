@@ -1,5 +1,7 @@
 # ModelPresenter
 
+[![Build Status](https://secure.travis-ci.org/ywen/model_presenter.png)](http://travis-ci.org/ywen/model_presenter)
+
 ModelPresenter provides basic framework in creating a presenter.
 
 ## Installation
