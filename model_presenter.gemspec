@@ -17,6 +17,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency(%q<minitest>)
   gem.add_development_dependency(%q<minitest-growl>)
   gem.add_development_dependency(%q<guard-minitest>)
-  gem.add_development_dependency(%q<spork-minitest>)
-  gem.add_development_dependency(%q<minitest-wscolor>)
+  gem.add_development_dependency(%q<spork-testunit>)
 end

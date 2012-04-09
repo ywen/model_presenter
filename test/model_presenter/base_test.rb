@@ -9,9 +9,9 @@ module ModelPresenter
     }
 
     describe ".forward_public_attributes" do
-      # before(:each) do
-      #   klass.send :forward_public_attributes
-      # end
+      before(:each) do
+        klass.send :forward_public_attributes
+      end
 
       it "have all the attributes" do
       end
