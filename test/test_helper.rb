@@ -1,0 +1,5 @@
+require 'rubygems'
+gem 'minitest'
+require 'minitest/autorun'
+require 'minitest/wscolor'
+require 'model_presenter'
