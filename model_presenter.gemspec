@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["hayafirst@gmail.com"]
   gem.description   = %q{Provides an implementation of Presenter pattern, but without needs fo Rails}
   gem.summary       = %q{Provides an implementation of Presenter pattern}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/ywen/model_presenter"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
