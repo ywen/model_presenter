@@ -19,7 +19,7 @@ module ModelPresenter
         end
       end
 
-      describe "when passing in a method that doesn't exist in the model object" do
+      context "when passing in a method that doesn't exist in the model object" do
         before(:each) do
           klass.send :forward_from_model, :attr3
         end
