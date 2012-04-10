@@ -2,7 +2,11 @@
 
 [![Build Status](https://secure.travis-ci.org/ywen/model_presenter.png)](http://travis-ci.org/ywen/model_presenter)
 
-ModelPresenter provides basic framework in creating a presenter.
+ModelPresenter provides basic framework in creating a presenter. The goal of the gem is that the presenter can be used in any Ruby projects that feel it needs to use this pattern, not limited to Rails projects.
+
+The presenter puts more emphasis on JSON representation of a business model object. But it can be used in classic HTML view just as easy.
+
+The gem is not trying to provide a automagic way to look cool. Rather, it focuses on explicitly expressing the intent of a Presenter class.
 
 ## Installation
 

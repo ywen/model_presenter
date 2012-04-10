@@ -4,8 +4,8 @@ require File.expand_path('../lib/model_presenter/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Yi Wen"]
   gem.email         = ["hayafirst@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Provides an implementation of Presenter pattern, but without needs fo Rails}
+  gem.summary       = %q{Provides an implementation of Presenter pattern}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
