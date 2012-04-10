@@ -28,7 +28,6 @@ class User
   include ModelPresenter::Base
   forward_from_model :attr1, :attr2
 end
-
 ```
 
 The ```forward_from_model``` defines methods ```attr1``` and ```attr2``` which calls the ```model.attr1``` ```model.attr2``` respectively.
@@ -38,7 +37,6 @@ A presenter instance can be initialized with
 ```ruby
 
 user = User.new(user_model)
-
 ```
 
 It always takes a model object as the only argument in the initializer. The model object is referred from within the presenter as ```presenter.model```. It is a private attribute reader.

@@ -3,26 +3,12 @@ require_relative '../test_helper'
 module ModelPresenter
   describe ForwardFromModel do
     let(:klass) {
-      Class.new {
-        extend ForwardFromModel
-        forward_from_model :attr1, :attr2
-        attr_reader :model
-        private :model
-        def initialize(object)
-          @model = object
-        end
-      }
+      ModelPresenter::TestHelpers.mock_base_class.tap do |c|
+        c.send :extend, ForwardFromModel
+        c.send :forward_from_model, :attr1, :attr2
+      end
     }
-    let(:object) {
-      Class.new {
-        def attr1
-          "value1"
-        end
-        def attr2
-          "value2"
-        end
-      }.new
-    }
+    let(:object) {  ModelPresenter::TestHelpers.mock_model_object }
 
     subject { klass.new object }
 
