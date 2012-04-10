@@ -47,7 +47,7 @@ The ```forward_from_model``` defines methods ```attr1``` and ```attr2``` which c
 
 The ```json_properties``` defines methods ```as_json```  which returns a hash in which the keys are the properties being passed in the ```json_properties``` and the value of a given property the ```presenter_object.property```
 
-An example output of as_json returns:
+An example output of ```as_json``` returns:
 
 ```json
 
