@@ -8,6 +8,16 @@ The presenter puts more emphasis on JSON representation of a business model obje
 
 The gem is not trying to provide a automagic way to look cool. Rather, it focuses on explicitly expressing the intent of a Presenter class. Please read the usage for the details
 
+## What is a presenter
+
+A presenter is a bridge between a business model and how it will be presented (as json, as HTML, as text, as PDF, etc.). A presenter covers logic that is necessary for presenting a business model, but such logic should not be put into the business model because it doesn't belong to.
+
+For example, what attributes are going to be included in the JSON return is not a business model's concern. Another example, If the front end needs to have a person's gender in a humanly readable way (such as "Male" and "Female"), it is not the business model's concern. The business model knows it's gender in some way, it might choose to represent it as a boolean ```model.male?``` and ```model.female?```. It is the responsibility of a presenter to provide what the front end needs. The Presenter may return the string ```Male``` or ```Female``` in its ```gender``` method.
+
+## What is not a presenter
+
+A presenter is a Ruby class, it is not a place for generating HTML tags and even strings. An HTML file is the place for writing HTML code.
+
 ## Installation
 
 Add this line to your application's Gemfile:
