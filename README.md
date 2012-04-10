@@ -6,7 +6,7 @@ ModelPresenter provides basic framework in creating a presenter. The goal of the
 
 The presenter puts more emphasis on JSON representation of a business model object. But it can be used in classic HTML view just as easy.
 
-The gem is not trying to provide a automagic way to look cool. Rather, it focuses on explicitly expressing the intent of a Presenter class.
+The gem is not trying to provide a automagic way to look cool. Rather, it focuses on explicitly expressing the intent of a Presenter class. Please read the usage for the details
 
 ## Installation
 
