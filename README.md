@@ -47,6 +47,17 @@ The ```forward_from_model``` defines methods ```attr1``` and ```attr2``` which c
 
 The ```json_properties``` defines methods ```as_json```  which returns a hash in which the keys are the properties being passed in the ```json_properties``` and the value of a given property the ```presenter_object.property```
 
+An example output of as_json returns:
+
+```json
+
+{
+  name: "John Smith",
+  gender: "Male",
+  email: "jsmith@example.com"
+}
+```
+
 Then one can use ```presenter_object.to_json``` to serilize it into a JSON string.
 
 A presenter instance can be initialized with 
