@@ -70,6 +70,50 @@ user.to_json
 
 It always takes a model object as the only argument in the initializer. The model object is referred from within the presenter as ```presenter.model```. It is a private attribute reader.
 
+## Rspec Macros
+
+The gem provides some rspec macros for speeding up your test effort for your presenters. To use it, in your ```spec_helper.rb``` among your other setup:
+
+```ruby
+
+require 'model_presenter/spec_support'
+RSpec.configure do |config|
+  ModelPresenter::SpecSupport.new(config).register
+end
+```
+
+And in a presenter test, you can do:
+
+```ruby
+
+describe User do
+  forward_from_model_attributes :first_name, :last_name, :email
+  as_json_attributes :first_name, :gender
+end
+```
+
+The ```forward_from_model_attributes``` macro will generate the following tests:
+
+```rspec
+
+User
+  #first_name
+    returns the model.first_name
+  #last_name
+    returns the model.last_name
+  #email
+    returns the model.email
+```
+
+and ```as_json_attributes``` macro will generate the following tests:
+
+```rspec
+
+  #as_json
+    has the key first_name with value set to presenter.first_name
+    has the key gender with value set to presenter.gender
+```
+
 ## Contributing
 
 1. Fork it
