@@ -16,7 +16,7 @@ For example, what attributes are going to be included in the JSON return is not 
 
 ## What is not a presenter
 
-A presenter is a Ruby class, it is not a place for generating HTML tags and even strings. An HTML file is the place for writing HTML code.
+A Presenter is not a place for generating HTML tags and code segments. An HTML file is where you write HTML code in.
 
 ## Installation
 
