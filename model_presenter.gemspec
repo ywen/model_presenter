@@ -19,7 +19,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency(%q<minitest-growl>)
   gem.add_development_dependency(%q<guard-minitest>)
   gem.add_development_dependency(%q<minitest-wscolor>)
-  gem.add_development_dependency(%q<cane>)
   gem.add_development_dependency(%q<rake>)
   gem.add_development_dependency(%q<mocha>)
   gem.add_development_dependency(%q<minitest-spec-context>)
