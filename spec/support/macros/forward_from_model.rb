@@ -5,7 +5,12 @@ module ModelPresenter
         attributes.each do |attribute|
           describe "##{attribute}" do
             it "returns the model.#{attribute}" do
-              subject.send(attribute).should eq(model.send(attribute))
+              result = subject.send(attribute)
+              if result.respond_to?(:should)
+                result.should eq(model.send(attribute))
+              else
+                expect(result).to eq(model.send(attribute))
+              end
             end
           end
         end
