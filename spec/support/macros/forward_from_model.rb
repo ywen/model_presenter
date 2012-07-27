@@ -5,6 +5,7 @@ module ModelPresenter
         attributes.each do |attribute|
           describe "##{attribute}" do
             it "returns the model.#{attribute}" do
+              model.stub(attribute).and_return(attribute)
               result = subject.send(attribute)
               if result.respond_to?(:should)
                 result.should eq(model.send(attribute))
