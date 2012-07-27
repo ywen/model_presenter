@@ -15,12 +15,15 @@ module ModelPresenter
       end
     }
     let(:object) { Object.new }
+
     subject {klass.new object}
+
     describe ".json_properties" do
       it "generates as_json method" do
         subject.must_respond_to :as_json
       end
     end
+
     describe "#as_json" do
       let(:result) { subject.as_json }
       { :attr1 => "value1", :attr2 => "value2" }.each do |key, value|

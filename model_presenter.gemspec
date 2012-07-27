@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = ModelPresenter::VERSION
   gem.add_runtime_dependency(%q<json>)
-  gem.add_development_dependency(%q<minitest>)
+  gem.add_development_dependency(%q<minitest>, "2.12.0")
   gem.add_development_dependency(%q<minitest-growl>)
   gem.add_development_dependency(%q<guard-minitest>)
   gem.add_development_dependency(%q<minitest-wscolor>)
