@@ -1,6 +1,7 @@
 require 'json/ext'
 require 'model_presenter/forward_from_model'
 require 'model_presenter/as_json'
+require 'model_presenter/moneyize'
 module ModelPresenter
   module Base 
     attr_reader :model
@@ -8,6 +9,7 @@ module ModelPresenter
     def self.included(mod)
       mod.extend ForwardFromModel
       mod.extend AsJson
+      mod.extend Moneyize
     end
 
     def initialize(model)

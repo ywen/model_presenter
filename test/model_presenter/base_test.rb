@@ -16,9 +16,16 @@ module ModelPresenter
         klass.must_respond_to :forward_from_model
       end
     end
+
     describe ".json_properties" do
       it "responds to .json_properties" do
         klass.must_respond_to :json_properties
+      end
+    end
+
+    describe ".moneyize" do
+      it "responds to .moneyize" do
+        klass.must_respond_to :moneyize
       end
     end
 
