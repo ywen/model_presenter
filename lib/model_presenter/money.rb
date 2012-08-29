@@ -8,7 +8,7 @@ module ModelPresenter
 
     def to_dollar
       amount_in_dollar = amount_in_cents.to_f / 100
-      amount_in_dollar.to_s
+      '%.2f' % amount_in_dollar
     end
   end
 end
