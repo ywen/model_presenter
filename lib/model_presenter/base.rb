@@ -1,6 +1,7 @@
 require 'json/ext'
 require 'model_presenter/forward_from_model'
 require 'model_presenter/as_json'
+require 'model_presenter/money'
 require 'model_presenter/moneyize'
 module ModelPresenter
   module Base 
