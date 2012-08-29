@@ -135,13 +135,22 @@ User
     returns the model.email
 ```
 
-and ```as_json_attributes``` macro will generate the following tests:
+```as_json_attributes``` macro will generate the following tests:
 
 ```rspec
 
   #as_json
     has the key first_name with value set to presenter.first_name
     has the key gender with value set to presenter.gender
+```
+
+```it_moneyize``` macro will generate the following tests:
+
+```rspec
+  #formatted_amount_remains
+    returns the formatted money in dollar
+  #formatted_some_other_money_field
+    returns the formatted money in dollar
 ```
 
 ## Contributing
