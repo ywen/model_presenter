@@ -81,6 +81,24 @@ user.to_json
 
 It always takes a model object as the only argument in the initializer. The model object is referred from within the presenter as ```presenter.model```. It is a private attribute reader.
 
+## Moneyize
+
+The presenter comes with a small helper for format the money. The usage:
+
+```ruby
+class User
+  include ModelPresenter::Base
+  forward_from_model :amount_remains
+  moneyize :amount_remains
+end
+```
+
+What ```moneyize``` does it to define a new method ```formatted_amount_remains``` and return a formatted dollar display string.
+
+NOTE: the ```amount_remains``` is supposed to be the amount in cents
+
+So assuming ```amount_remains``` is ```46780```. The ```formatted_amount_remains``` returns ```$ 467.80```
+
 ## Rspec Macros
 
 The gem provides some rspec macros for speeding up your test effort for your presenters. To use it, in your ```spec_helper.rb``` among your other setup:
@@ -100,6 +118,7 @@ And in a presenter test, you can do:
 describe User do
   forward_from_model_attributes :first_name, :last_name, :email
   as_json_attributes :first_name, :gender
+  it_moneyize :amount_remains, :some_other_money_field
 end
 ```
 
