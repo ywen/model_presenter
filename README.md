@@ -99,6 +99,10 @@ NOTE: the ```amount_remains``` is supposed to be the amount in cents
 
 So assuming ```amount_remains``` is ```46780```. The ```formatted_amount_remains``` returns ```$ 467.80```
 
+## Convention for Using with Rails
+
+In a Rails controller, I always initializes one and only one instance variable for using it in view - an instance of a Presenter class. The presenter have all necessary logic to make the view as dumb as possible. And all the logic can be unit tested just like any PORO, make your testing effort easy and enjoyable.
+
 ## Rspec Macros
 
 The gem provides some rspec macros for speeding up your test effort for your presenters. To use it, in your ```spec_helper.rb``` among your other setup:
