@@ -23,7 +23,7 @@ module ModelPresenter
         before(:each) do
           klass.send :forward_from_model, :attr3
         end
-        
+
         it "raises an exception" do
           lambda{subject.attr3}.must_raise(NoMethodError)
         end

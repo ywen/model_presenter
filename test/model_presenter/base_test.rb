@@ -11,9 +11,16 @@ module ModelPresenter
 
     let(:object) {  ModelPresenter::TestHelpers.mock_model_object }
     subject { klass.new object }
+
     describe ".forward_from_model" do
       it "responds to .forward_from_model" do
         klass.must_respond_to :forward_from_model
+      end
+    end
+
+    describe ".has_many" do
+      it "responds to .has_many" do
+        klass.must_respond_to :has_many
       end
     end
 
