@@ -29,10 +29,6 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install model_presenter
-
 ## Usage
 
 An example presenter that uses the ```ModelPresenter::Base```
@@ -98,6 +94,19 @@ What ```moneyize``` does it to define a new method ```formatted_amount_remains``
 NOTE: the ```amount_remains``` is supposed to be the amount in cents
 
 So assuming ```amount_remains``` is ```46780```. The ```formatted_amount_remains``` returns ```$ 467.80```
+
+## has_many
+
+The presenter can define a ```has_many``` relationship
+
+```ruby
+class User
+  include ModelPresenter::Base
+  has_many :groups, presenter_class: Presenters::Group
+end
+```
+
+The macro will generates a ```groups``` methods, which will return an array. Each element of the array is an instance of ```Presenters::Group``` whose ```model``` is one of the group models that the user has.
 
 ## Convention for Using with Rails
 
