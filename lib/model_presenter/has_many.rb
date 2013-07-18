@@ -2,12 +2,14 @@ module ModelPresenter
   module HasMany
     # The DSL adds an instance method `relation` to represnet a `has_many` relationship
     #
-    # ```ruby
+    # `
+    #
     # class User
     #   include ModelPresenter::Base
     #   has_many :groups, presenter_class: Presenters::Group
     # end
-    # ```
+    #
+    # `
     #
     # The macro will generates a ```groups``` methods, which will return an array. Each element of the array is an instance of ```Presenters::Group``` whose ```model``` is one of the group models that the user has.
     #
