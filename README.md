@@ -1,7 +1,8 @@
 # ModelPresenter
 
-[![Build Status](https://secure.travis-ci.org/ywen/model_presenter.png)](http://travis-ci.org/ywen/model_presenter)
+[![Build Status](https://travis-ci.org/ywen/model_presenter.png?branch=master)](https://travis-ci.org/ywen/model_presenter)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/ywen/model_presenter)
+
 
 ModelPresenter provides basic framework in creating a presenter. The goal of the gem is that the presenter can be used in any Ruby projects that feel it needs to use this pattern, not limited to Rails projects.
 
