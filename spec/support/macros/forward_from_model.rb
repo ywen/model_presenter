@@ -5,10 +5,10 @@ module ModelPresenter
         attributes.each do |attribute|
           describe "##{attribute}" do
             it "returns the model.#{attribute}" do
-              model.stub(attribute).and_return(attribute)
-              result = subject.send(attribute)
+              allow(model).to receive(attribute).and_return(attribute)
+              result = presenter.send(attribute)
               if result.respond_to?(:should)
-                result.should eq(model.send(attribute))
+                expect(result).to eq(model.send(attribute))
               else
                 expect(result).to eq(model.send(attribute))
               end
